@@ -11,12 +11,12 @@ public class Main {
         System.out.println("Hello and Welcome to FightGame!");
         System.out.print("Enter your Fighter name: ");
         human.setName(input.nextLine());
-///test
-        String test = "test";
+
         // Starting game
         int turn = 0;
         while(human.getHp() > 0 && computer.getHp() > 0){
             turn++;
+
             //Displaying parameters before each turn
             System.out.println("****************Turn #" + turn + "**************************");
             System.out.println("Computer HP: " + computer.getHp() + ". Computer energy: " + computer.getEnergy());
@@ -123,9 +123,9 @@ public class Main {
         System.out.println(human.getName() + " HP: " + human.getHp() +". "+ human.getName()+" energy: " + human.getEnergy());
         // Choosing the winner
         if(computer.getHp() == 0){
-            System.out.println(human.getName() + " WON! Congratulations");
+            System.out.println(human.getName() + " WON in " + turn + "rounds. Congratulations!");
         } else {
-            System.out.println(human.getName() + " LOST! Good luck next Time!");
+            System.out.println(human.getName() + " LOST in " + turn + "rounds. Good luck next Time!");
         }
 
     }

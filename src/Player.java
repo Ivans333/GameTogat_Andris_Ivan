@@ -6,27 +6,6 @@ public class Player {
     private int hp = 100;
     private int energy = 100;
 
-
-    public void lowKick (Player target){
-        target.decreseHp(10);
-        this.energy -= 10;
-    }
-    public void bodyKick (Player target){
-        target.decreseHp(20);
-        this.energy -= 20;
-    }
-    public void highKick (Player target){
-        target.decreseHp(40);
-        this.energy -= 40;
-    }
-    public void defence (){
-        this.hp += 15;
-        if (this.hp >= 100){
-            this.hp = 100;
-        }
-        this.energy -= 30;
-    }
-
     // GETTERS
     public String getName() {
         return name;
@@ -56,6 +35,26 @@ public class Player {
         if(this.energy >= 100){
             this.energy = 100;
         }
+    }
+    // Action methods
+    public void lowKick (Player target){
+        target.decreseHp(10);
+        this.energy -= 10;
+    }
+    public void bodyKick (Player target){
+        target.decreseHp(20);
+        this.energy -= 20;
+    }
+    public void highKick (Player target){
+        target.decreseHp(40);
+        this.energy -= 40;
+    }
+    public void defence (){
+        this.hp += 15;
+        if (this.hp >= 100){
+            this.hp = 100;
+        }
+        this.energy -= 30;
     }
 
 
