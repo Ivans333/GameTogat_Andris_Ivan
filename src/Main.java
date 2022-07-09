@@ -11,7 +11,8 @@ public class Main {
         System.out.println("Hello and Welcome to FightGame!");
         System.out.print("Enter your Fighter name: ");
         human.setName(input.nextLine());
-
+///test
+        String test = "test";
         // Starting game
         int turn = 0;
         while(human.getHp() > 0 && computer.getHp() > 0){
